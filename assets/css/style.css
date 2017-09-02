@@ -1,0 +1,18 @@
+body {
+	width: 940px;
+}
+
+.input-group-btn {
+	margin-top: 400px;
+}
+
+.card-block {
+	background-color: #c8cace;
+	border-style: solid;
+	border-width: 1px;
+	text-align: center;
+}
+
+.searchContainer {
+	margin-top: 250px;
+}
