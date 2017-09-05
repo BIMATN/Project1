@@ -14,8 +14,10 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 
  /*____________________________________________VARIABLES__________________________________________________*/
 
- var weather={};
- var appId = "appid=8d122bcbebb8b66272304e0075264f6d";
+ var weather=[{},{},{},{},{}];
+ var weatherCurrent={};
+ var weatherCast=[];
+ var appId="appid=8d122bcbebb8b66272304e0075264f6d";
  var queryURL;
 
  /*_____________________________________________Functions__________________________________________________*/
@@ -30,15 +32,16 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
    }).done(function(response) 
    {
      console.log(response)
-     weather.city=response.name;
-     weather.temp=response.main.temp;
-     weather.clouds=response.weather[0].description;
-     weather.precip=response.rain;
-     weather.humid=response.main.humidity;
-     weather.wind=response.wind.speed;
-     weather.sunrise=response.sys.sunrise;
-     weather.sunset=response.sys.sunset;
-     console.log(weather);
+     weatherCurrent.city=response.name;
+     weatherCurrent.temp=response.main.temp;
+     weatherCurrent.clouds=response.weather[0].description;
+     weatherCurrent.precip=response.rain;
+     weatherCurrent.humid=response.main.humidity;
+     weatherCurrent.wind=response.wind.speed;
+     weatherCurrent.sunrise=response.sys.sunrise;
+     weatherCurrent.sunset=response.sys.sunset;
+     weatherCurrent.icon='<img src="http://openweathermap.org/img/w/"'+response.weather[0].icon+'".png alt="weather icon>"';
+     console.log(weatherCurrent);
    });
  }
 
@@ -53,18 +56,28 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
     //Future scripting that utilizes date and time to pick most relevant time of forecast
      console.log(response);
      //for loop to test getting forecast data - choosing approx high temps of each day - results in 5 days worth of forecast in console
-     for(i=7;i<39;i=i+7){
-      weather.city=response.city.name;
-      weather.temp=response.list[i].main.temp;
-      weather.clouds=response.list[i].weather[0].description;
-      weather.precip=response.list[i].rain;
-      weather.humid=response.list[i].main.humidity;
-      weather.wind=response.list[i].wind.speed;
-      weather.sunrise=response.list[i].sys.sunrise;
-      weather.sunset=response.list[i].sys.sunset;
-      console.log(weather);
+     var j=7;
+     var i;
+     for(i=0;i<5;i++){
+		weather[i].city=response.city.name;
+		weather[i].temp=response.list[j].main.temp;
+		weather[i].clouds=response.list[j].weather[0].description;
+		weather[i].precip=response.list[j].rain;
+		weather[i].humid=response.list[j].main.humidity;
+		weather[i].wind=response.list[j].wind.speed;
+		weather[i].sunrise=response.list[j].sys.sunrise;
+		weather[i].sunset=response.list[j].sys.sunset;
+		weather[i].icon='<img src="http://openweathermap.org/img/w/'+response.list[j].weather[0].icon+'.png" alt="weather-icon">';
+		weatherCast.push(weather[i]);
+		console.log(weather[i]);
+		j+=8;
      }
    });
  }
- weatherNow('boulder');
- weatherThen('boulder'/*,time of event*/);
+ weatherNow('Eureka');
+ weatherThen('santa fe'/*,time of event*/);
+ // weatherThen('honolulu'/*,time of event*/);
+ // weatherThen('miami'/*,time of event*/);
+ // weatherThen('phoenix'/*,time of event*/);
+ // weatherThen('santa fe'/*,time of event*/);
+ console.log(weatherCast);
