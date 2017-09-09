@@ -12,9 +12,9 @@
 	<div class="container">
 		<div class="row"a>
 			<nav class="navbar fixed-top navbar-light bg">
-		  		<a class="navbar-brand" href="#">Popular Events</a>
-		  		<a class="navbar-brand" href="#">Log In</a>
-		  		<a class="navbar-brand" href="#">Recently Viewed Events</a>
+		  		<button class="navbar-brand">Popular Events</button>
+		  		<a class="navbar-brand">Log In</a>
+		  		<button class="navbar-brand">Recently Viewed Events</button>
 			</nav>
 		</div>
 			<br>
@@ -27,121 +27,23 @@
   			<div class="col-5">
     			<div class="input-group">
       				<span class="input-group-btn">
-        				<button class="btn btn-secondary" type="button">GO</button>
+        				<button class="btn btn-secondary" type="button" id="searchGo">GO</button>
       				</span>
-     				 	<input type="text" class="form-control" placeholder="Know Before You Go..." aria-label="Search for...">
+     				 	<input id="searchBar" type="text" class="form-control" placeholder="Know Before You Go..." aria-label="Search for...">
     			</div>
   			</div>
-  			<div class="col-3"></div>
+		</div>
+		<br>
+		<div id="cardSection" class="row">
 		</div>
 	</div>
+<footer>
+	<p>&copy; 2017</p> 
+</footer>
 
-<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-1"></div>
-			<div class="col-3">
-				<div class="card" style="width: 17rem;">
-				  <div class="card-body">
-				    <h4 class="card-title">Event</h4>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Description</li>
-				    		<li>Date</li>
-				    		<li>Time</li>
-				    		<li>Location</li>
-				    	</ul>
-				    </p>
-				    <a href="#">
-				    <img src="assets/images/weather.png" alt="Weather" class="img-thumbnail" width="50px" height="50px"></a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="card" style="width: 17rem;">
-				  <div class="card-body">
-				    <h4 class="card-title">Event</h4>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Description</li>
-				    		<li>Date</li>
-				    		<li>Time</li>
-				    		<li>Location</li>
-				    	</ul>
-				    </p>
-				    <a href="#">
-				    <img src="assets/images/weather.png" alt="Weather" class="img-thumbnail" width="50px" height="50px"></a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-3">
-				<div class="card" style="width: 17rem;">
-				  <div class="card-body">
-				    <h4 class="card-title">Event</h4>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Description</li>
-				    		<li>Date</li>
-				    		<li>Time</li>
-				    		<li>Location</li>
-				    	</ul>
-				    </p>
-				    <a href="#">
-				    <img src="assets/images/weather.png" alt="Weather" class="img-thumbnail" width="50px" height="50px"></a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-2"></div>
-		</div>
 
-		
-
-	</div>
-<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-2"></div>
-			<div class="col-4">
-				<div class="card" style="width: 17rem;">
-				  <div class="card-body">
-				    <h4 class="card-title">Event</h4>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Description</li>
-				    		<li>Date</li>
-				    		<li>Time</li>
-				    		<li>Location</li>
-				    	</ul>
-				    </p>
-				    <a href="#">
-				    <img src="assets/images/weather.png" alt="Weather" class="img-thumbnail" width="50px" height="50px"></a>
-				  </div>
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="card" style="width: 17rem;">
-				  <div class="card-body">
-				    <h4 class="card-title">Event</h4>
-				    <p class="card-text">
-				    	<ul>
-				    		<li>Description</li>
-				    		<li>Date</li>
-				    		<li>Time</li>
-				    		<li>Location</li>
-				    	</ul>
-				    </p>
-				    <a href="#">
-				    <img src="assets/images/weather.png" alt="Weather" class="img-thumbnail" width="50px" height="50px"></a>
-				  </div>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<footer>
-		<p>&copy; 2017</p> 
-	</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/logic.js"></script>
 
 </body>
 
