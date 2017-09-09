@@ -13,9 +13,6 @@ nav {
 }
 
 .card {
-	height: 25%;
-	width: 25%;
-
 	background-color: #c8cace;
 	border: black;
 	border-style: solid;
@@ -45,4 +42,13 @@ nav {
 .thumbnail {
 	margin-left: 
 
+}
+
+footer {
+	background-color: #c8cace;
+	text-align: center;
+	margin-top: 50px;
+	padding: 15px 0px 10px 0px;
+	width: 100%;
+	font-weight: bold;
 }
