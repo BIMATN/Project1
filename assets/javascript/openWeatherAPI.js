@@ -78,7 +78,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      }
    });
  }
- weatherNow('phoen');
+ weatherNow('phoenix');
  //weatherThen('miami'/*,time of event*/)
  weatherThen('honolulu'/*,time of event*/);
  // weatherThen('miami'/*,time of event*/);
