@@ -14,7 +14,7 @@ if (userSearch === "") {
 	return;
 } else {
 	console.log("user search was a string");
-	$("#cardSection").html(cardBuild);
+	//$("#cardSection").html(cardBuild); uncomment once our cards are done being worked with - to make this all work
 	findEvents("football");
 }
 
