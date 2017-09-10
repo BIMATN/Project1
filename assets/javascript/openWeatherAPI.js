@@ -78,6 +78,3 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      }
    });
  }
- weatherNow('phoenix');
- weatherThen('honolulu');
- console.log(weatherCast);
