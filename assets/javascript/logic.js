@@ -13,9 +13,9 @@ console.log(userSearch);
 if (userSearch === "") {
 	return;
 } else {
-	console.log("user search was a string");
-	//$("#cardSection").html(cardBuild); uncomment once our cards are done being worked with - to make this all work
-	findEvents("football");
+	console.log("user search was not an empty string");
+	//$("#cardSection").html(cardBuild);
+	weatherThen(33.44,-112.04);
 }
 
 });
