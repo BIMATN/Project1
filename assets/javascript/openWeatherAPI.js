@@ -22,6 +22,12 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 
  /*_____________________________________________Functions__________________________________________________*/
 
+ //this function actually prints to the card
+  function weatherPrint(){
+   $("#c1Text").html('<ul><li>Temp: '+weatherCurrent.temp+'<li>Sunrise: '+weatherCurrent.sunrise+'<li>Sunset: '+weatherCurrent.sunset+'<li>'+weatherCurrent.icon+'</ul>')
+  }
+
+//this function retreives current weather
  function weatherNow(lat,long) {
 
    queryURL= 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
@@ -31,7 +37,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      method: "GET"
    }).done(function(response) 
    {
-     console.log(response)
+     //console.log(response)
      weatherCurrent.city=response.name;
      weatherCurrent.temp=response.main.temp;
      weatherCurrent.clouds=response.weather[0].description;
@@ -40,11 +46,15 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      weatherCurrent.wind=response.wind.speed;
      weatherCurrent.sunrise=moment(response.sys.sunrise, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
      weatherCurrent.sunset=moment(response.sys.sunset, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
-     weatherCurrent.icon='<img src="http://openweathermap.org/img/w/"'+response.weather[0].icon+'".png alt="weather icon>"';
-     console.log(weatherCurrent);
+     console.log(response.weather[0].icon);
+     weatherCurrent.icon='<img src="http://openweathermap.org/img/w/'+response.weather[0].icon+'.png" alt="weather icon">';
+     weatherPrint();
    });
+   console.log(weatherCurrent);
+   
  }
 
+//this function retrieves forecast info for next 5 days at 2pm each day
  function weatherThen(lat,long){
   queryURL= 'http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
 
@@ -54,7 +64,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
    }).done(function(response) 
    {
     //Future scripting that utilizes date and time to pick most relevant time of forecast
-     console.log(response);
+     //console.log(response);
      //for loop to test getting forecast data - choosing approx high temps of each day - results in 5 days worth of forecast in console
      var j=7;
      if(response.cnt > 39){//this if condition changes based on the qty of returned info from openweather to ensure that 2pm is always chosen
@@ -78,4 +88,5 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      }
    });
    console.log(weatherCast);
+   weatherPrint();
  }
