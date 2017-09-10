@@ -1,5 +1,5 @@
 body {
-	background: url(http://d5vf6134d8ffdnfp1qv4rv3l.wpengine.netdna-cdn.com/wp-content/uploads/05-igazu-falls-cinemagraph.gif) no-repeat ;
+	background: url(https://s-media-cache-ak0.pinimg.com/originals/1d/f7/81/1df78147c4a8f5f19867a1a0cd0ea3c1.gif) no-repeat ;
     background-size: cover;
     margin-left: 20px;
     margin-right:20px;
@@ -38,12 +38,12 @@ nav {
 
 #siteTitle{
 	font-weight: bold;
-	color: green;
+	color: #f9fbff;
 	font-family: fantasy;
 }
 
 footer {
-	color: green;
+	color: #a1a4a8;
 	text-align: center;
 	margin-top: 50px;
 	padding: 15px 0px 10px 0px;
