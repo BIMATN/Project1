@@ -2,9 +2,9 @@
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-      function initMap() {
+      function initMap(lat, long) {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: latVar, lng: lngVar},
+          center: {lat: lat, lng: long},
           zoom: 13
         });
         var card = document.getElementById('pac-card');

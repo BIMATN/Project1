@@ -15,6 +15,7 @@ if (userSearch === "") {
 } else {
 	console.log("user search was a string");
 	$("#cardSection").html(cardBuild);
+	findEvents("football");
 }
 
 });
