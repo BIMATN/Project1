@@ -22,9 +22,9 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 
  /*_____________________________________________Functions__________________________________________________*/
 
- function weatherNow(city) {
+ function weatherNow(lat,long) {
 
-   queryURL= 'http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial&'+appId;
+   queryURL= 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
 
    $.ajax({
      url: queryURL,
@@ -45,8 +45,8 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
    });
  }
 
- function weatherThen(city,time){
-  queryURL= 'http://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=imperial&'+appId;
+ function weatherThen(lat,long){
+  queryURL= 'http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
 
    $.ajax({
      url: queryURL,
