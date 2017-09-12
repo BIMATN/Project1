@@ -1,6 +1,7 @@
 body {
 	background: url(https://s-media-cache-ak0.pinimg.com/originals/1d/f7/81/1df78147c4a8f5f19867a1a0cd0ea3c1.gif) no-repeat ;
     background-size: cover;
+    background-attachment: fixed;
     margin-left: 20px;
     margin-right:20px;
 }
@@ -49,7 +50,7 @@ footer {
 	padding: 15px 0px 10px 0px;
 	width: 100%;
 	font-family: arial;
-	position: absolute;
+	position: fixed;
 	right: 0;
 	left: 0;
 	bottom: 0;
