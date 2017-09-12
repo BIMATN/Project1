@@ -23,7 +23,21 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 
  //this function actually prints to the card
   function weatherPrint(){
-   $("#c1Text").html('<ul><li>Temp: '+weatherCurrent.temp+'<li>Sunrise: '+weatherCurrent.sunrise+'<li>Sunset: '+weatherCurrent.sunset+'<li>'+weatherCurrent.icon+'</ul>')
+   $("#weatherIcon").html(weatherCurrent.icon);
+   if(weatherCurrent.clouds !== undefined){
+    $("#description").html("Summary: "+weatherCurrent.clouds);
+   }
+   else{
+    $("#description").html("Summary: None Available");
+   }
+   $("#temp").html("Temp: "+weatherCurrent.temp+String.fromCharCode(176)+" F");
+   $("#wind").html("Wind: "+weatherCurrent.wind+" mph");
+   if(weatherCurrent.precip !== undefined){
+    $("#rain").html("Rain: "+weatherCurrent.precip+" inches over the last 3 hours");
+   }
+   else{
+    $("#rain").html("Rain: No rain over the last 3 hours");
+   }
   }
 
 //this function retreives current weather
@@ -46,6 +60,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      weatherCurrent.sunrise=moment(response.sys.sunrise, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
      weatherCurrent.sunset=moment(response.sys.sunset, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
      weatherCurrent.icon='<img src="http://openweathermap.org/img/w/'+response.weather[0].icon+'.png" alt="weather icon">';
+     weatherPrint();
    });
    console.log(weatherCurrent);
    
