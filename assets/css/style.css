@@ -1,9 +1,10 @@
 body {
-	background: url(https://s-media-cache-ak0.pinimg.com/originals/1d/f7/81/1df78147c4a8f5f19867a1a0cd0ea3c1.gif) no-repeat ;
+	  background: url(https://s-media-cache-ak0.pinimg.com/originals/1d/f7/81/1df78147c4a8f5f19867a1a0cd0ea3c1.gif) no-repeat ;
     background-size: cover;
     background-attachment: fixed;
     margin-left: 20px;
     margin-right:20px;
+    font-family: 'Alegreya SC', serif;
 }
 
 nav {
@@ -37,10 +38,10 @@ nav {
 	margin-left: 
 }
 
-#siteTitle{
+#siteTitle, #slogan{
 	font-weight: bold;
 	color: #f9fbff;
-	font-family: fantasy;
+	font-family: 'Alegreya SC', serif;
 }
 
 footer {
@@ -58,5 +59,9 @@ footer {
 
 .modalSubHeaders{
   color:white !important;
+}
+
+.btn-light{
+  margin-bottom: 10px;
 }
 /*-------------------------------------------------------------------------------------------------------*/
