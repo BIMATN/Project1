@@ -17,8 +17,9 @@ if (userSearch === "") {
 	console.log("user search was not an empty string");
 	findEvents(userSearch);
 	$("#cardSection").html(cardBuild);
-	placeData();
-	weatherNow(33.44,-112.04);//testing weatherNow function which should spit data out to the console
+	/*placeData();
+	weatherNow(33.44,-112.04);//testing weatherNow function which should spit data out to the console*/
+
 }
 
 });
