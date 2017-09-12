@@ -23,12 +23,12 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 
  //this function actually prints to the card
   function weatherPrint(){
-   $("#weatherIcon").html(weatherCurrent.icon);
+   $("#weatherSubHead").html("What's it like in "+weatherCurrent.city+"?");
    if(weatherCurrent.clouds !== undefined){
-    $("#description").html("Summary: "+weatherCurrent.clouds);
+    $("#weatherIcon").html(weatherCurrent.icon+""+weatherCurrent.clouds);
    }
    else{
-    $("#description").html("Summary: None Available");
+    $("#weatherIcon").html(weatherCurrent.icon);
    }
    $("#temp").html("Temp: "+weatherCurrent.temp+String.fromCharCode(176)+" F");
    $("#wind").html("Wind: "+weatherCurrent.wind+" mph");
