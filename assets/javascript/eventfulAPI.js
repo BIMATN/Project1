@@ -1,4 +1,8 @@
 // $(document).ready(function() {
+  var latitude;
+  var longitude;
+  var latlong = [{},{},{},{},{}];
+
   function eventPrint(event) {
     for(var i = 0; i < 5; i++) {
       $("#c"+(i+1)+"EventTitle").text(event[i].title);
@@ -12,6 +16,13 @@
                         /* '<li>Description: '+ event[i].description +*/ '</ul>');
       }
     }
+  }
+
+  function returnEventLatLong() {
+    // var eventLatLong = {latitude , longitude};
+    // console.log(eventLatLong);
+    // return eventLatLong;
+    return latlong[4];
   }
 
   function findEvents(search) {
@@ -34,9 +45,15 @@
           event[i].description = oData.events.event[i].description,
           event[i].latitude = oData.events.event[i].latitude,
           event[i].longitude = oData.events.event[i].longitude
+          latlong[i].latitude = event.map(function(a) {return a.latitude;});
+          latlong[i].longitude = event.map(function(a) {return a.longitude;});
         }
         // console.log(event[1].description.dataType);
         eventPrint(event);
+        // latitude = event.map(function(a) {return a.latitude;});
+        // longitude = event.map(function(a) {return a.longitude;});
+        returnEventLatLong(event);
+        
       },
       error: function(errorp){
         console.log(errorp);
