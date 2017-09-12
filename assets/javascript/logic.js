@@ -15,14 +15,10 @@ if (userSearch === "") {
 } else {
 	$("#searchBar").val("");//clears search bar
 	console.log("user search was not an empty string");
-	//$("#cardSection").html(cardBuild);
-	weatherNow(33.44,-112.04);//testing weatherNow function which should spit data out to the page
+	$("#cardSection").html(cardBuild);
 	var searchResults = findEvents(userSearch);
-	
 	console.log("LatLong: ");
-	console.log(returnEventLatLong());
+	latVar = returnEventLatLong();
 }
-
 });
-
 });
