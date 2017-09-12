@@ -1,9 +1,9 @@
-function placeData(){
+function placeData(lat, long){
     var areaInfo;
     var service;
     var eventGeometry;
 
-    eventGeometry = new google.maps.LatLng(33,-112);
+    eventGeometry = new google.maps.LatLng(lat,long);
 
     areaInfo = {
     location: eventGeometry,
