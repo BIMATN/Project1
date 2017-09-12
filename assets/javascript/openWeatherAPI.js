@@ -14,9 +14,8 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 
  /*____________________________________________VARIABLES__________________________________________________*/
 
- var weather=[{},{},{},{},{}];
+ var weatherCast=[{},{},{},{},{}];
  var weatherCurrent={};
- var weatherCast=[];
  var appId="appid=8d122bcbebb8b66272304e0075264f6d";
  var queryURL;
 
@@ -46,9 +45,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      weatherCurrent.wind=response.wind.speed;
      weatherCurrent.sunrise=moment(response.sys.sunrise, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
      weatherCurrent.sunset=moment(response.sys.sunset, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
-     console.log(response.weather[0].icon);
      weatherCurrent.icon='<img src="http://openweathermap.org/img/w/'+response.weather[0].icon+'.png" alt="weather icon">';
-     weatherPrint();
    });
    console.log(weatherCurrent);
    
@@ -75,18 +72,16 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      }
      var i;
      for(i=0;i<5;i++){
-     weather[i].city=response.city.name;
-     weather[i].temp=response.list[j].main.temp;
-     weather[i].clouds=response.list[j].weather[0].description;
-     weather[i].precip=response.list[j].rain;
-     weather[i].humid=response.list[j].main.humidity;
-     weather[i].wind=response.list[j].wind.speed;
-     weather[i].time=moment(response.list[j].dt, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
-     weather[i].icon='<img src="http://openweathermap.org/img/w/'+response.list[j].weather[0].icon+'.png" alt="weather-icon">';
-     weatherCast.push(weather[i]);
+     weatherCast[i].city=response.city.name;
+     weatherCast[i].temp=response.list[j].main.temp;
+     weatherCast[i].clouds=response.list[j].weather[0].description;
+     weatherCast[i].precip=response.list[j].rain;
+     weatherCast[i].humid=response.list[j].main.humidity;
+     weatherCast[i].wind=response.list[j].wind.speed;
+     weatherCast[i].time=moment(response.list[j].dt, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
+     weatherCast[i].icon='<img src="http://openweathermap.org/img/w/'+response.list[j].weatherCast[0].icon+'.png" alt="weather-icon">';
      j+=8;
      }
    });
    console.log(weatherCast);
-   weatherPrint();
  }

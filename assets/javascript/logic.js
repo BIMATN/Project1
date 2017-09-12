@@ -19,6 +19,7 @@ if (userSearch === "") {
 	//$("#cardSection").html(cardBuild);
 	weatherNow(33.44,-112.04);//testing weatherNow function which should spit data out to the page
 	findEvents(userSearch);
+	placeData();
 }
 
 });
