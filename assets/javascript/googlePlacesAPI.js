@@ -9,7 +9,8 @@ function placeData(lat, long){
     location: eventGeometry,
     radius: '5000',
     keyword: 'hotel',
-    type: ['establishment']
+    type: ['establishment'],
+    rankBy: google.maps.places.RankBy.PROMINENCE
     };
 
     service = new google.maps.places.PlacesService($('#emptyDiv').get(0));
