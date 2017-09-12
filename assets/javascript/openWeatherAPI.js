@@ -32,12 +32,8 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
    }
    $("#temp").html("Temp: "+weatherCurrent.temp+String.fromCharCode(176)+" F");
    $("#wind").html("Wind: "+weatherCurrent.wind+" mph");
-   if(weatherCurrent.precip !== undefined){
-    $("#rain").html("Rain: "+weatherCurrent.precip+" inches over the last 3 hours");
-   }
-   else{
-    $("#rain").html("Rain: No rain over the last 3 hours");
-   }
+   $("#sunriseTime").html("Sunrise: "+weatherCurrent.sunrise);
+   $("#sunsetTime").html("Sunset: "+weatherCurrent.sunset);
   }
 
 //this function retreives current weather
@@ -57,8 +53,8 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      weatherCurrent.precip=response.rain;
      weatherCurrent.humid=response.main.humidity;
      weatherCurrent.wind=response.wind.speed;
-     weatherCurrent.sunrise=moment(response.sys.sunrise, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
-     weatherCurrent.sunset=moment(response.sys.sunset, 'X').format('dddd, MMMM Do YYYY, h:mm:ss a');
+     weatherCurrent.sunrise=moment(response.sys.sunrise, 'X').format('h:mm:ss a');
+     weatherCurrent.sunset=moment(response.sys.sunset, 'X').format('h:mm:ss a');
      weatherCurrent.icon='<img src="http://openweathermap.org/img/w/'+response.weather[0].icon+'.png" alt="weather icon">';
      weatherPrint();
    });
