@@ -35,27 +35,32 @@
 			        <div class="card-body">
 			           <h4 class="card-title" id="c1EventTitle">Event</h4>
 			            <p class="card-text" id="c1Text">
-			            <button class="knowButton" data-toggle="modal" data-target=".bd-example-modal-lg">Know Before You Go?</button>
-			            	<div class="m-auto">
-			        			<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-									<div class="modal-dialog modal-lg">
-							   			 <div class="modal-content">
-			        				
-							    		</div>
-							  		</div>
-								</div>
-			        		</div>
 			            </p>
 			        </div>
-			        
-			        <div class="m-auto">
-			        	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-lg">
-							    <div class="modal-content">
-			        				<button class="knowButton" data-toggle="modal" data-target=".bd-example-modal-lg">Know Before You Go?</button>
-							      ...
-							    </div>
-							  </div>
+									        
+									     <!--modal button :) -->
+						<button type="button" class="btn btn-light border-dark" data-toggle="modal" data-target="#myModal">
+						  Know Before You Go?
+						</button>
+
+						<!-- Modal :) -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="exampleModalLabel">Outer Space!</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        ...bananananananananas
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</
+						      </div>
+						    </div>
+						  </div>
 						</div>
 			        </div>
 			    </div>
@@ -115,6 +120,11 @@
 	<p>&copy;2017 - 99 Problems But Coding Ain't One</p> 
 </footer>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/logic.js"></script>
 <script type="text/javascript" src="http://api.eventful.com/js/api"></script>
