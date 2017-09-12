@@ -36,7 +36,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
    $("#sunsetTime").html("Sunset: "+weatherCurrent.sunset);
   }
 
-//this function retreives current weather
+//this function retreives current weather data
  function weatherNow(lat,long) {
 
    queryURL= 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
@@ -62,7 +62,9 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
    
  }
 
-//this function retrieves forecast info for next 5 days at 2pm each day
+
+/*-------------------------------------------Function below is for future use--------------------------------------------*/
+/*this function retrieves forecast info for next 5 days at 2pm each day
  function weatherThen(lat,long){
   queryURL= 'http://api.openweathermap.org/data/2.5/forecast?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
 
@@ -95,4 +97,4 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      }
    });
    console.log(weatherCast);
- }
+ }*/

@@ -38,7 +38,8 @@ if (userSearch === "") {
 			latVar = latlngReturn.latitude[0];
 			lngVar = latlngReturn.longitude[0];
 			weatherNow(latVar,lngVar);
-			placeData(latVar,lngVar);
+			placeHotelData(latVar,lngVar);
+			placeRestaurantData(latVar,lngVar);
 		}
 		else if($(this).data("value")==='c2Modal'){
 			console.log("this is card 2 modal info");
@@ -46,8 +47,8 @@ if (userSearch === "") {
 			latVar = latlngReturn.latitude[1];
 			lngVar = latlngReturn.longitude[1];
 			weatherNow(latVar,lngVar);
-			placeData(latVar,lngVar);
-
+			placeHotelData(latVar,lngVar);
+			placeRestaurantData(latVar,lngVar);
 		}
 		else if($(this).data("value")==='c3Modal'){
 			console.log("this is card 3 modal info");
@@ -55,7 +56,8 @@ if (userSearch === "") {
 			latVar = latlngReturn.latitude[2];
 			lngVar = latlngReturn.longitude[2];
 			weatherNow(latVar,lngVar);
-			placeData(latVar,lngVar);
+			placeHotelData(latVar,lngVar);
+			placeRestaurantData(latVar,lngVar);
 		}
 		else if($(this).data("value")==='c4Modal'){
 			console.log("this is card 4 modal info");
@@ -63,7 +65,8 @@ if (userSearch === "") {
 			latVar = latlngReturn.latitude[3];
 			lngVar = latlngReturn.longitude[3];
 			weatherNow(latVar,lngVar);
-			placeData(latVar,lngVar);
+			placeHotelData(latVar,lngVar);
+			placeRestaurantData(latVar,lngVar);
 		}
 		else if($(this).data("value")==='c5Modal'){
 			console.log("this is card 5 modal info");
@@ -71,7 +74,8 @@ if (userSearch === "") {
 			latVar = latlngReturn.latitude[4];
 			lngVar = latlngReturn.longitude[4];
 			weatherNow(latVar,lngVar);
-			placeData(latVar,lngVar);
+			placeHotelData(latVar,lngVar);
+			placeRestaurantData(latVar,lngVar);
 		}
 		else{
 			console.log("not a modal launch button");
