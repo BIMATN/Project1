@@ -7,13 +7,13 @@
     for(var i = 0; i < 5; i++) {
       $("#c"+(i+1)+"EventTitle").text(event[i].title);
       if(event[i].description === null) {
-        $("#c"+(i+1)+"Text").html('<ul class="list-group"><li class="list-group-item">Where: '+ event[i].city_name + ", " + event[i].region_abbr +
-                        '<li class="list-group-item">When: '+ event[i].start_time + '</ul>');
+        $("#c"+(i+1)+"Text").html('<ul class="list-group"><li class="list-group-item">Where: <p>'+ event[i].city_name + ", " + event[i].region_abbr +
+                        '</p><li class="list-group-item">When: <p>'+ moment(event[i].start_time, "YYYYMMDD").format('MMMM Do YYYY') + '</p></ul>');
       }
       else {
-        $("#c"+(i+1)+"Text").html('<ul class="list-group"><li class="list-group-item">Where: '+ event[i].city_name + ", " + event[i].region_abbr +
-                        '<li class="list-group-item">When: '+ event[i].start_time + 
-                        /* '<li>Description: '+ event[i].description +*/ '</ul>');
+        $("#c"+(i+1)+"Text").html('<ul class="list-group"><li class="list-group-item">Where: <p>'+ event[i].city_name + ", " + event[i].region_abbr +
+                        '</p><li class="list-group-item">When: <p>'+ moment(event[i].start_time, "YYYYMMDD").format('MMMM Do YYYY') + 
+                        /* '<li>Description: '+ event[i].description +*/ '</p></ul>');
       }
     }
   }
