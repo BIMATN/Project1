@@ -35,6 +35,7 @@ if (userSearch === "") {
 			weatherNow(latVar,lngVar);
 			placeHotelData(latVar,lngVar);
 			placeRestaurantData(latVar,lngVar);
+			populateModal(searchResults[0]);
 		}
 		else if($(this).data("value")==='c2Modal'){
 			console.log("this is card 2 modal info");
@@ -44,6 +45,7 @@ if (userSearch === "") {
 			weatherNow(latVar,lngVar);
 			placeHotelData(latVar,lngVar);
 			placeRestaurantData(latVar,lngVar);
+			populateModal(searchResults[1]);
 		}
 		else if($(this).data("value")==='c3Modal'){
 			console.log("this is card 3 modal info");
@@ -53,6 +55,7 @@ if (userSearch === "") {
 			weatherNow(latVar,lngVar);
 			placeHotelData(latVar,lngVar);
 			placeRestaurantData(latVar,lngVar);
+			populateModal(searchResults[2]);
 		}
 		else if($(this).data("value")==='c4Modal'){
 			console.log("this is card 4 modal info");
@@ -62,6 +65,7 @@ if (userSearch === "") {
 			weatherNow(latVar,lngVar);
 			placeHotelData(latVar,lngVar);
 			placeRestaurantData(latVar,lngVar);
+			populateModal(searchResults[3]);
 		}
 		else if($(this).data("value")==='c5Modal'){
 			console.log("this is card 5 modal info");
@@ -71,6 +75,7 @@ if (userSearch === "") {
 			weatherNow(latVar,lngVar);
 			placeHotelData(latVar,lngVar);
 			placeRestaurantData(latVar,lngVar);
+			populateModal(searchResults[4]);
 		}
 		else{
 			console.log("not a modal launch button");
