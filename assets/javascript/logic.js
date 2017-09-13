@@ -151,4 +151,3 @@ var config = {
 	});
 
 	});
-			populateModal(searchResults[0]);
