@@ -44,11 +44,19 @@ nav {
 	font-family: 'Alegreya SC', serif;
 }
 
+#slogan{
+	margin:0;
+}
+
+#copyright{
+	margin:0;
+}
+
 footer {
 	color: #a1a4a8;
 	text-align: center;
 	margin-top: 50px;
-	padding: 15px 0px 10px 0px;
+	padding: 5px 0px 5px 0px;
 	width: 100%;
 	font-family: arial;
 	position: fixed;
