@@ -73,6 +73,10 @@ footer {
   color:white !important;
 }
 
+.modal-body{
+	background-image: url("../images/debut_light.png");
+}
+
 .btn-light{
   margin-bottom: 10px;
 }
