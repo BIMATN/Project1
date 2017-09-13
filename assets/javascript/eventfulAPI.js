@@ -18,8 +18,9 @@
   }
 
   function populateModal(selectedEvent) {
+    $("#modalLabelInfo").text(selectedEvent.title);
     if(selectedEvent.description === null) {
-      $("#what").text("What: " + selectedEvent.title);
+      $("#what").html("What: " + "<a href=" + selectedEvent.url + ">" + selectedEvent.title + "</a>");
       $("#when").text("When: " + moment(selectedEvent.start_time, "YYYYMMDD, hh:mm:ss").format("LLL"));
       $("#where").text("Where: " + selectedEvent.city_name + ", " + selectedEvent.region_abbr);
 
@@ -30,17 +31,17 @@
       document.querySelector("#where.list-group-item").style.width = '100%';
     }
     else {
-      $("#what").text("What: " + selectedEvent.description);
+      $("#what").html("<a href=" + selectedEvent.url + "> Desciption: </a>" + selectedEvent.description);
       $("#when").text("When: " + moment(selectedEvent.start_time, "YYYYMMDD, hh:mm:ss").format("LLL"));
       $("#where").text("Where: " + selectedEvent.city_name + ", " + selectedEvent.region_abbr)
 
       console.log(selectedEvent.description.length);
       if(selectedEvent.description.length > 100) {
         //Add CSS styling to keep description box from pushing outside of modal boundaries
-        document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '10%';
-        document.querySelector("#what.list-group-item").style.width = '10%';
-        document.querySelector("#when.list-group-item").style.width = '10%';
-        document.querySelector("#where.list-group-item").style.width = '10%';
+        document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '8%';
+        document.querySelector("#what.list-group-item").style.width = '8%';
+        document.querySelector("#when.list-group-item").style.width = '8%';
+        document.querySelector("#where.list-group-item").style.width = '8%';
       }
       else {
         //Otherwise we reset the width of those items back to 100%
@@ -79,11 +80,11 @@
           event[i].start_time = oData.events.event[i].start_time,
           event[i].description = oData.events.event[i].description,
           event[i].latitude = oData.events.event[i].latitude,
-          event[i].longitude = oData.events.event[i].longitude
+          event[i].longitude = oData.events.event[i].longitude,
+          event[i].url = oData.events.event[i].url
           latlong[i].latitude = event.map(function(a) {return a.latitude;});
           latlong[i].longitude = event.map(function(a) {return a.longitude;});
         }
-        // console.log(event[1].description.dataType);
         eventPrint(event);
         // latitude = event.map(function(a) {return a.latitude;});
         // longitude = event.map(function(a) {return a.longitude;});

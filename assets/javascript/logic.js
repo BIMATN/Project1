@@ -129,7 +129,7 @@ var config = {
 				$(location).attr('href', 'index.html');	}).catch(function(error){
 					alert(error.message);
 				});
-	}
+		}
 	});
 
 	$('#su-btn').on('click', function(){
