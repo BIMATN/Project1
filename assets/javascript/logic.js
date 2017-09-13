@@ -114,8 +114,10 @@ var config = {
 
 	firebase.auth().onAuthStateChanged(function(user){
 	if(user && (currentPath === 'index.html' || currentPath === '/')) {
-
-	$(location).attr('href', 'index.html');
+		$(location).attr('href', 'index.html');
+		$('#logIn').addClass('hidden');
+		$('#su-btn').addClass('hidden');
+		$('#sign-out').removeClass('hidden');
 		} 
 	else if(!user && currentPath === 'index.html') {
 	$(location).attr('href', 'index.html');
