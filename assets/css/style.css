@@ -7,6 +7,10 @@ body {
     font-family: 'Alegreya SC', serif;
 }
 
+.hidden{
+	display: none;
+}
+
 nav {
 	color: black;
 	background-color: #c8cace;

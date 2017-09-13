@@ -116,7 +116,8 @@ var config = {
 	if(user && (currentPath === 'index.html' || currentPath === '/')) {
 
 	$(location).attr('href', 'index.html');
-		} else if(!user && currentPath === 'index.html') {
+		} 
+	else if(!user && currentPath === 'index.html') {
 	$(location).attr('href', 'index.html');
 	}
 	});
