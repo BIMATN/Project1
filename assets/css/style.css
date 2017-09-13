@@ -34,6 +34,10 @@ nav {
     text-align: left;
 }
 
+.card {
+	background-image: url("../images/debut_light.png");
+}
+
 .thumbnail {
 	margin-left: 
 }
@@ -69,7 +73,15 @@ footer {
   color:white !important;
 }
 
+.modal-body{
+	background-image: url("../images/debut_light.png");
+}
+
 .btn-light{
   margin-bottom: 10px;
+}
+
+.modal-body {
+	background-image: url("../images/tiles.png");
 }
 /*-------------------------------------------------------------------------------------------------------*/
