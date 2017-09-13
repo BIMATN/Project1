@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var latVar; //save lat from eventful api to this var and use it for open weather and google
 	var lngVar; //save long from eventful api to this var and use it for open weather and google
 	var latlngReturn;
-	var cardBuild = '<div class="col-xl-1"></div><div class="col-xl-2"><div class="card"><div class="card-body"><h5 class="card-title"id="c1EventTitle"></h5><p class="card-text"id="c1Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModal"data-toggle="modal"type="button" data-value="c1Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"id="card2"><div class="card-body"><h5 class="card-title"id="c2EventTitle"></h5><p class="card-text"id="c2Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModal"data-toggle="modal"type="button" data-value="c2Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"id="card3"><div class="card-body"><h5 class="card-title"id="c3EventTitle"></h5><p class="card-text"id="c3Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModal"data-toggle="modal"type="button" data-value="c3Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"id="card4"><div class="card-body"><h5 class="card-title"id="c4EventTitle"></h5><p class="card-text"id="c4Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModal"data-toggle="modal"type="button" data-value="c4Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"><div class="card-body"id="card5"><h5 class="card-title"id="c5EventTitle"></h5><p class="card-text"id="c5Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModal"data-toggle="modal"type="button" data-value="c5Modal">Know Before You Go?</button></div></div></div><div class="col-xl-1"></div>';
+	var cardBuild = '<div class="col-xl-1"></div><div class="col-xl-2"><div class="card"><div class="card-body"><h5 class="card-title"id="c1EventTitle"></h5><p class="card-text"id="c1Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModalInfo"data-toggle="modal"type="button" data-value="c1Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"id="card2"><div class="card-body"><h5 class="card-title"id="c2EventTitle"></h5><p class="card-text"id="c2Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModalInfo"data-toggle="modal"type="button" data-value="c2Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"id="card3"><div class="card-body"><h5 class="card-title"id="c3EventTitle"></h5><p class="card-text"id="c3Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModalInfo"data-toggle="modal"type="button" data-value="c3Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"id="card4"><div class="card-body"><h5 class="card-title"id="c4EventTitle"></h5><p class="card-text"id="c4Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModalInfo"data-toggle="modal"type="button" data-value="c4Modal">Know Before You Go?</button></div></div></div><div class="col-xl-2"><div class="card"><div class="card-body"id="card5"><h5 class="card-title"id="c5EventTitle"></h5><p class="card-text"id="c5Text"></div><div class="m-auto"><button class="btn-light"data-target="#myModalInfo"data-toggle="modal"type="button" data-value="c5Modal">Know Before You Go?</button></div></div></div><div class="col-xl-1"></div>';
 
 
 	/*--------------------------------------------------------Functions-----------------------------------------------------------------*/
@@ -14,7 +14,6 @@ $(document).ready(function() {
 	function run(){
 		userSearch = $("#searchBar").val().trim();
 		//console.log(userSearch);
-
 		if (userSearch === "") {
 			console.log("user search was empty");
 			clickOrEnter=true;
@@ -98,8 +97,6 @@ $(document).ready(function() {
 			}
 		});
 	}
-
-
 var config = {
     apiKey: "AIzaSyAb39fOCsGl6FwaaLuCOT30y6PDcIk7-iY",
     authDomain: "bimatn-project1.firebaseapp.com",
