@@ -8,6 +8,71 @@
   	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
 </head>
 <body>
+
+
+
+            
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalLabel">Event Name</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					 </button>
+				      </div>
+				     <div class="modal-body">
+				     	<div class="container-fluid">
+						<div class="input-field-inline">
+						<input id="si-email" type="email" class="validate black-text">
+						<label for="si-email" data-error="wrong" data-success="right">Email</label>
+						</div>
+						<div class="input-field-inline">
+						<input id="si-password" type="password" class="validate-black-text">
+						<label for="si-password" data-error="wrong" data-success="right">Password</label>
+						</div>
+						</div>				        
+					</div>
+					<div class="modal-footer">
+					<button id="si-btn" class="modal-action modal-close waves-effect waves-green btn-flat teal white-text">Log in</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalLabel">Event Name</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					 </button>
+				      </div>
+				     <div class="modal-body">
+				     	<div class="container-fluid">
+						<div class="input-field inline">
+                 		 <input id="su-email" type="email" class="validate black-text">
+                		 <label for="su-email" data-error="wrong" data-success="right">Email</label>
+               			 </div>
+                		<div class="input-field inline">
+	                  <input id="su-password" type="password" class="validate black-text">
+	                  <label for="su-password" data-error="wrong" data-success="right">Password</label>
+	                </div>
+					</div>				        
+					</div>
+					<div class="modal-footer">
+					<button id="su-btn" class="modal-action modal-close waves-effect waves-green btn-flat teal white-text">sign up</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+
+
+
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
@@ -67,11 +132,16 @@
 			</div>
 		</div>
 	</div>	
-	<nav class="navbar fixed-top navbar-dark bg-dark justify-content-end">
+	<nav class="navbar navbar-expand fixed-top navbar-dark bg-dark justify-content-end">
 		<h2 id="siteTitle" class="mr-auto">Know Before You Go</h2>
+		<!--<h5 class="mr-auto" style="color:white">Adventure is Your Endeavor || Information is Your Catalyst</h5>-->
 		<button class="btn btn-sm btn-outline-secondary" type="button">Popular Events</button>
 		<button class="btn btn-sm btn-outline-secondary" type="button">Recently Viewed Events</button>
-		<button class="btn btn-sm btn-outline-secondary" type="button">LOG IN</button>
+		<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#myModal1" id="su-btn">Sign Up</button>
+		<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#myModal" id="c3Modal">Log In
+		</button>
+		<button id="sign-out" class="btn btn-sm btn-outline-secondary" type="submit" name="action">Sign Out</button>
+
 	</nav>
 	<div class="container-fluid">
 			<br><br><br>
@@ -92,10 +162,14 @@
 	<br><br><br><br>
 	<div id="emptyDiv"></div>
 <footer class="bg-dark">
-	<h5 class="mr-auto" id="slogan">Adventure is Your Endeavor || Information is Your Catalyst</h5>
-	<p id="copyright">&copy;2017 - 99 Problems But Coding Ain't One</p> 
+<h6 class="mr-auto" style="color:white">Adventure is Your Endeavor || Information is Your Catalyst</h6>
+	<p style="font-size:10px">&copy;2017 - 99 Problems But Coding Ain't One</p> 
 </footer>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js">
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>

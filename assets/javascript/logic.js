@@ -93,4 +93,56 @@ $(document).ready(function() {
 			}
 		});
 	}
-});
+
+
+var config = {
+    apiKey: "AIzaSyAb39fOCsGl6FwaaLuCOT30y6PDcIk7-iY",
+    authDomain: "bimatn-project1.firebaseapp.com",
+    databaseURL: "https://bimatn-project1.firebaseio.com",
+    projectId: "bimatn-project1",
+    storageBucket: "bimatn-project1.appspot.com",
+    messagingSenderId: "183023569419"
+  };
+  firebase.initializeApp(config)
+
+	var currentPath = $(location)[0].pathname;
+
+	firebase.auth().onAuthStateChanged(function(user){
+	if(user && (currentPath === 'index.html' || currentPath === '/')) {
+
+	$(location).attr('href', 'index.html');
+		} else if(!user && currentPath === 'index.html') {
+	$(location).attr('href', 'index.html');
+	}
+	});
+
+	$('#si-btn').on('click', function(){
+		var email = $('#si-email').val().trim();
+		var password = $('#si-password').val().trim();
+		if(email && password) {
+			firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
+				$(location).attr('href', 'index.html');	}).catch(function(error){
+					alert(error.message);
+				});
+	}
+	});
+
+	$('#su-btn').on('click', function(){
+		var email = $('#su-email').val().trim();
+		var password = $('#su-password').val().trim();
+		firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+			$(location).attr('href', 'index.html');
+		}).catch(function(error){
+			alert(error.message);
+		});
+	});
+
+	$('#sign-out').on('click',function(){
+		firebase.auth().signOut().then(function(){
+			$(location).attr('href', 'index.html');
+		}).catch(function(error){
+			alert(error.message);
+		});
+	});
+
+	});
