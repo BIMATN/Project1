@@ -39,7 +39,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
 //this function retreives current weather data
  function weatherNow(lat,long) {
 
-   queryURL= 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
+   queryURL= 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=imperial&'+appId;
 
    $.ajax({
      url: queryURL,
@@ -55,7 +55,7 @@ Maximum 60 Calls per Minute - I will work off of assumption that we only get wea
      weatherCurrent.wind=response.wind.speed;
      weatherCurrent.sunrise=moment(response.sys.sunrise, 'X').format('h:mm:ss a');
      weatherCurrent.sunset=moment(response.sys.sunset, 'X').format('h:mm:ss a');
-     weatherCurrent.icon='<img src="http://openweathermap.org/img/w/'+response.weather[0].icon+'.png" alt="weather icon">';
+     weatherCurrent.icon='<img src="https://openweathermap.org/img/w/'+response.weather[0].icon+'.png" alt="weather icon">';
      weatherPrint();
    });
    console.log(weatherCurrent);
