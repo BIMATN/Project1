@@ -64,7 +64,7 @@
   function findEvents(search) {
     //var event = [] throws error
     var event = [{},{},{},{},{}];
-    var eventfulURL = "http://api.eventful.com/json/events/search/rss?...&keywords=" + search +"&app_key=9zCDHrBz5GtqXSLv&sort_order=popularity&date=This Week";
+    var eventfulURL = "https://api.eventful.com/json/events/search/rss?...&keywords=" + search +"&app_key=9zCDHrBz5GtqXSLv&sort_order=popularity&date=This Week";
     $.ajax({
       url: eventfulURL,
       method: "GET",
