@@ -19,38 +19,38 @@
 
   function populateModal(selectedEvent) {
     $("#modalLabelInfo").text(selectedEvent.title);
-    if(selectedEvent.description === null) {
+    // if(selectedEvent.description === null) {
       $("#what").html("What: " + "<a href=" + selectedEvent.url + ">" + selectedEvent.title + "</a>");
       $("#when").text("When: " + moment(selectedEvent.start_time, "YYYYMMDD, hh:mm:ss").format("LLL"));
       $("#where").text("Where: " + selectedEvent.city_name + ", " + selectedEvent.region_abbr);
 
       //Ensures the proper width for the envent info card inside of the modal
-      document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '100%';
-      document.querySelector("#what.list-group-item").style.width = '100%';
-      document.querySelector("#when.list-group-item").style.width = '100%';
-      document.querySelector("#where.list-group-item").style.width = '100%';
-    }
-    else {
-      $("#what").html("<a href=" + selectedEvent.url + "> Desciption: </a>" + selectedEvent.description);
-      $("#when").text("When: " + moment(selectedEvent.start_time, "YYYYMMDD, hh:mm:ss").format("LLL"));
-      $("#where").text("Where: " + selectedEvent.city_name + ", " + selectedEvent.region_abbr)
+      // document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '100%';
+      // document.querySelector("#what.list-group-item").style.width = '100%';
+      // document.querySelector("#when.list-group-item").style.width = '100%';
+      // document.querySelector("#where.list-group-item").style.width = '100%';
+    // }
+    // else {
+    //   $("#what").html("<a href=" + selectedEvent.url + "> Desciption: </a>" + selectedEvent.description);
+    //   $("#when").text("When: " + moment(selectedEvent.start_time, "YYYYMMDD, hh:mm:ss").format("LLL"));
+    //   $("#where").text("Where: " + selectedEvent.city_name + ", " + selectedEvent.region_abbr)
 
-      console.log(selectedEvent.description.length);
-      if(selectedEvent.description.length > 100) {
-        //Add CSS styling to keep description box from pushing outside of modal boundaries
-        document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '8%';
-        document.querySelector("#what.list-group-item").style.width = '8%';
-        document.querySelector("#when.list-group-item").style.width = '8%';
-        document.querySelector("#where.list-group-item").style.width = '8%';
-      }
-      else {
-        //Otherwise we reset the width of those items back to 100%
-        document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '100%';
-        document.querySelector("#what.list-group-item").style.width = '100%';
-        document.querySelector("#when.list-group-item").style.width = '100%';
-        document.querySelector("#where.list-group-item").style.width = '100%';
-      }
-    }
+    //   console.log(selectedEvent.description.length);
+    //   if(selectedEvent.description.length > 100) {
+    //     //Add CSS styling to keep description box from pushing outside of modal boundaries
+    //     document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '8%';
+    //     document.querySelector("#what.list-group-item").style.width = '8%';
+    //     document.querySelector("#when.list-group-item").style.width = '8%';
+    //     document.querySelector("#where.list-group-item").style.width = '8%';
+    //   }
+      // else {
+      //   //Otherwise we reset the width of those items back to 100%
+      //   document.querySelector("#eventSubHead.list-group-item.disabled.bg-secondary.modalSubHeaders").style.width = '100%';
+      //   document.querySelector("#what.list-group-item").style.width = '100%';
+      //   document.querySelector("#when.list-group-item").style.width = '100%';
+      //   document.querySelector("#where.list-group-item").style.width = '100%';
+      // }
+    // }
 
   }
 

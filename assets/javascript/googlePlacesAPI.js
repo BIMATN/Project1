@@ -24,7 +24,7 @@ function placeHotelData(lat, long){
         for(var i=0;i<5;i++){
             hotels.push(data[i].name);
         }
-    setTimeout(placePrint(), 2000);
+    setTimeout(placePrint(), 1000);
   });
 }
 
@@ -49,7 +49,7 @@ function placeRestaurantData(lat, long){
         for(var i=0;i<5;i++){
             restaurants.push(data[i].name);
         }
-    setTimeout(placePrint(), 1000);
+    setTimeout(placePrint(), 500);
   });
 }
 
