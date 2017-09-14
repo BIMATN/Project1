@@ -1,18 +1,91 @@
 body {
-	width: 940px;
+	  background: url(https://s-media-cache-ak0.pinimg.com/originals/1d/f7/81/1df78147c4a8f5f19867a1a0cd0ea3c1.gif) no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: 20px;
+    margin-right:20px;
+    font-family: 'Alegreya SC', serif;
 }
 
-.input-group-btn {
-	margin-top: 400px;
+.hidden{
+	display: none;
 }
 
-.card-block {
+nav {
+	color: black;
 	background-color: #c8cace;
-	border-style: solid;
-	border-width: 1px;
-	text-align: center;
+	height: 65px;
 }
 
-.searchContainer {
-	margin-top: 250px;
+.card {
+	background-color: #c8cace;
+	border: black;
+	border-style: solid;
+	border-width: 2px;
 }
+
+.input-group{
+	border: black;
+	border-width: 2px;
+	margin-top: 100px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: left;
+}
+
+.card {
+	background-image: url("../images/debut_light.png");
+}
+
+.thumbnail {
+	margin-left: 
+}
+
+#siteTitle, #slogan{
+	font-weight: bold;
+	color: #f9fbff;
+	font-family: 'Alegreya SC', serif;
+}
+
+#slogan{
+	margin:0;
+}
+
+#copyright{
+	margin:0;
+}
+
+footer {
+	color: #a1a4a8;
+	text-align: center;
+	margin-top: 50px;
+	padding: 5px 0px 5px 0px;
+	width: 100%;
+	font-family: arial;
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.modalSubHeaders{
+  color:white !important;
+}
+
+.modal-body{
+	background-image: url("../images/debut_light.png");
+}
+
+.btn-light{
+  margin-bottom: 10px;
+}
+
+.modal-body {
+	background-image: url("../images/tiles.png");
+}
+/*-------------------------------------------------------------------------------------------------------*/

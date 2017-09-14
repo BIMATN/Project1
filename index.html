@@ -1,172 +1,175 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
+<meta charset="utf-8">
 <head>
-  	<meta charset="UTF-8">
-  	<title>Project1</title>
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<title>KnowB4UGo</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  	<link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
 </head>
-
-<body>
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav">
-		        <li><a href="#">Popular Events</a></li>
-		        <li><a href="#">Popular Destinations</a></li>
-		      </ul>
-		    </div>
-		  </div>
-		</nav>
-
-		<div class="row">
-			<div class="col-lg-3"></div>
-			  	<div class="col-lg-6">
-			    	<div class="input-group" id="searchBar">
-					    <input type="text" class="form-control" placeholder="Search for...">
-					    	<span class="input-group-btn">
-			        			<button class="btn btn-default" type="button">Go!</button>
-			      			</span>
-			      	</div>
-		    	</div>
-		  	</div>
-		</div>
-	<br>
-		<div class="searchContainer">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
+<body>            
+<div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalLabel">Log In</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					 </button>
+				      </div>
+				     <div class="modal-body">
+				     	<div class="container-fluid">
+						<div class="input-field-inline">
+						<input id="si-email" type="email" class="validate black-text">
+						<label for="si-email" data-error="wrong" data-success="right">Email</label>
+						</div>
+						<div class="input-field-inline">
+						<input id="si-password" type="password" class="validate-black-text">
+						<label for="si-password" data-error="wrong" data-success="right">Password</label>
+						</div>
+						</div>				        
 					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
+					<div class="modal-footer">
+					<button id="si-btn" class="modal-action modal-close waves-effect waves-green btn-flat teal white-text">Log in</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
-
+	</div>
+<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalLabel">Sign Up</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					 </button>
+				      </div>
+				     <div class="modal-body">
+				     	<div class="container-fluid">
+						<div class="input-field inline">
+                 		 <input id="su-email" type="email" class="validate black-text">
+                		 <label for="su-email" data-error="wrong" data-success="right">Email</label>
+               			 </div>
+                		<div class="input-field inline">
+	                  <input id="su-password" type="password" class="validate black-text">
+	                  <label for="su-password" data-error="wrong" data-success="right">Password</label>
+	                </div>
+					</div>				        
+					</div>
+					<div class="modal-footer">
+					<button id="su-btn" class="modal-action modal-close waves-effect waves-green btn-flat teal white-text">sign up</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="modal fade" id="myModalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Get Ready for Adventure</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+					 </button>
+				      </div>
+				     <div class="modal-body">
+				     	<div class="container-fluid">
+					     	<div class="row">
+					     		<div class="col-xl-8">
+							     	<ul class="list-group">
+							     	  <li class="list-group-item disabled bg-secondary modalSubHeaders" id="eventSubHead">Event Details</li>
+							     	  <li class="list-group-item" id="what">What:</li>
+							     	  <li class="list-group-item" id="when">When:</li>
+							     	  <li class="list-group-item" id="where">Where:</li>
+							     	</ul>
+							    </div>
+					     		<div class="col-xl-4">
+							     	<ul class="list-group">
+							     	  <li class="list-group-item disabled bg-secondary modalSubHeaders" id="weatherSubHead"></li>
+							     	  <li class="list-group-item" id="weatherIcon"></li>
+							     	  <li class="list-group-item" id="temp"></li>
+							     	  <li class="list-group-item" id="wind"></li>
+								      <li class="list-group-item" id="sunriseTime"></li>
+								      <li class="list-group-item" id="sunsetTime"></li>
+								    </ul>
+								</div>
+							</div>
+							<div class="row">
+					     		<div class="col-xl-6">
+							     	<ul class="list-group">
+							     	  <li class="list-group-item disabled bg-secondary modalSubHeaders">Popular Hotels</li>
+							     	  <li class="list-group-item" id="hotel1"></li>
+							     	  <li class="list-group-item" id="hotel2"></li>
+							     	  <li class="list-group-item" id="hotel3"></li>
+							     	  <li class="list-group-item" id="hotel4"></li>
+							     	  <li class="list-group-item" id="hotel5"></li>
+							     	</ul>
+							    </div>
+							    <div class="col-xl-6">
+							     	<ul class="list-group">
+							     	  <li class="list-group-item disabled bg-secondary modalSubHeaders">Popular Restaurants</li>
+							     	  <li class="list-group-item" id="restaurant1"></li>
+							     	  <li class="list-group-item" id="restaurant2"></li>
+							     	  <li class="list-group-item" id="restaurant3"></li>
+							     	  <li class="list-group-item" id="restaurant4"></li>
+							     	  <li class="list-group-item" id="restaurant5"></li>
+							     	</ul>
+							    </div>
+						    </div>
+						</div>				        
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<nav class="navbar navbar-expand fixed-top navbar-dark bg-dark justify-content-end">
+		<h2 id="siteTitle" class="mr-auto">Know Before You Go</h2>
+		<!--<h5 class="mr-auto" style="color:white">Adventure is Your Endeavor || Information is Your Catalyst</h5>-->
+		<button class="btn btn-sm btn-outline-secondary hidden" type="button">Popular Events</button>
+		<button class="btn btn-sm btn-outline-secondary hidden" type="button">Recently Viewed Events</button>
+		<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#signUp" id="su-btn">Sign Up</button>
+		<button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#logIn" id="si-btn">Log In
+		</button>
+		<button class="btn btn-sm btn-outline-secondary hidden" type="submit" name="action" id="sign-out">Sign Out</button>
+	</nav>
+	<div class="container-fluid">
+			<br><br><br>
+		<div class="row justify-content-center">
+  			<div class="col-5 align-self-center">
+    			<div class="input-group">
+     				<input id="searchBar" type="text" class="form-control" placeholder="Know Before You..." aria-label="Search for...">
+     				<span class="input-group-btn">
+        				<button class="btn btn-secondary" type="button" id="searchGo">GO</button>
+      				</span>
+    			</div>
+  			</div>
+		</div>
 		<br>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-			</div>
+		<div id="cardSection" class="row">
 		</div>
-
-		<br>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="card" style="width: 20rem;">
-						  	<div class="card-block">
-							    <h4 class="card-title">Card title</h4>
-							    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" class="btn btn-primary">Go somewhere</a>
-						  </div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+	</div>
+	<br><br><br><br>
+	<div id="emptyDiv"></div>
+<footer class="bg-dark">
+<h6 class="mr-auto" style="color:white">Adventure is Your Endeavor || Information is Your Catalyst</h6>
+	<p style="font-size:10px">&copy;2017 - 99 Problems But Coding Ain't One</p> 
+</footer>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+<script type="text/javascript" src="assets/javascript/eventfulAPI.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhvTdJwkIpLNAIGx5vot9qw5PXLYHUAwU&libraries=places"></script>
+<script type="text/javascript" src="assets/javascript/googlePlacesAPI.js"></script>
+<script type="text/javascript" src="assets/javascript/openWeatherAPI.js"></script>
+<script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 </html>
