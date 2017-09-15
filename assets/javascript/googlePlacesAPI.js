@@ -65,3 +65,15 @@ function placePrint(){
     $("#restaurant4").html(restaurantIcon+" "+restaurants[3]);
     $("#restaurant5").html(restaurantIcon+" "+restaurants[4]);
 }
+function placeClear(){
+    $("#hotel1").empty();
+    $("#hotel2").empty();
+    $("#hotel3").empty();
+    $("#hotel4").empty();
+    $("#hotel5").empty();
+    $("#restaurant1").empty();
+    $("#restaurant2").empty();
+    $("#restaurant3").empty();
+    $("#restaurant4").empty();
+    $("#restaurant5").empty();
+}

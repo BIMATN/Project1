@@ -28,6 +28,7 @@ $(document).ready(function() {
 			latlngReturn=returnEventLatLong();
 			$(".btn-light").on("click", function(){
 				if($(this).data("value")==='c1Modal'){
+					placeClear();
 					console.log("this is card 1 modal info");
 					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[0];
@@ -38,6 +39,7 @@ $(document).ready(function() {
 					populateModal(searchResults[0]);
 				}
 				else if($(this).data("value")==='c2Modal'){
+					placeClear();
 					console.log("this is card 2 modal info");
 					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[1];
@@ -48,6 +50,7 @@ $(document).ready(function() {
 					populateModal(searchResults[1]);
 				}
 				else if($(this).data("value")==='c3Modal'){
+					placeClear();
 					console.log("this is card 3 modal info");
 					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[2];
@@ -58,6 +61,7 @@ $(document).ready(function() {
 					populateModal(searchResults[2]);
 				}
 				else if($(this).data("value")==='c4Modal'){
+					placeClear();
 					console.log("this is card 4 modal info");
 					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[3];
@@ -68,6 +72,7 @@ $(document).ready(function() {
 					populateModal(searchResults[3]);
 				}
 				else if($(this).data("value")==='c5Modal'){
+					placeClear();
 					console.log("this is card 5 modal info");
 					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[4];
