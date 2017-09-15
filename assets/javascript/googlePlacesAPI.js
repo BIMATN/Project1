@@ -22,9 +22,9 @@ function placeHotelData(lat, long){
     service.nearbySearch(areaInfo, function(data){
         hotelIcon = '<img src="'+data[0].icon+'" alt="hotel icon">';
         for(var i=0;i<5;i++){
-            hotels.push(data[i].name);
+            hotels.splice(i,1,data[i].name);//pushes to array with data return by splicing at array index equal to i
         }
-    setTimeout(placePrint(), 1000);
+    /*setTimeout(*/placePrint()//, 2000);
   });
 }
 
@@ -47,9 +47,9 @@ function placeRestaurantData(lat, long){
     service.nearbySearch(areaInfo, function(data){
         restaurantIcon = '<img src="'+data[0].icon+'" alt="restaurant icon">';
         for(var i=0;i<5;i++){
-            restaurants.push(data[i].name);
+            restaurants.splice(i,1,data[i].name);//pushes to array with data return by splicing at array index equal to i
         }
-    setTimeout(placePrint(), 500);
+    /*setTimeout(*/placePrint()//, 1000);
   });
 }
 

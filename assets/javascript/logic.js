@@ -25,10 +25,11 @@ $(document).ready(function() {
 			//console.log("user search was not an empty string");
 			$("#cardSection").html(cardBuild);
 			var searchResults = findEvents(userSearch);
+			latlngReturn=returnEventLatLong();
 			$(".btn-light").on("click", function(){
 				if($(this).data("value")==='c1Modal'){
 					console.log("this is card 1 modal info");
-					latlngReturn=returnEventLatLong();
+					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[0];
 					lngVar = latlngReturn.longitude[0];
 					weatherNow(latVar,lngVar);
@@ -38,7 +39,7 @@ $(document).ready(function() {
 				}
 				else if($(this).data("value")==='c2Modal'){
 					console.log("this is card 2 modal info");
-					latlngReturn=returnEventLatLong();
+					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[1];
 					lngVar = latlngReturn.longitude[1];
 					weatherNow(latVar,lngVar);
@@ -48,7 +49,7 @@ $(document).ready(function() {
 				}
 				else if($(this).data("value")==='c3Modal'){
 					console.log("this is card 3 modal info");
-					latlngReturn=returnEventLatLong();
+					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[2];
 					lngVar = latlngReturn.longitude[2];
 					weatherNow(latVar,lngVar);
@@ -58,7 +59,7 @@ $(document).ready(function() {
 				}
 				else if($(this).data("value")==='c4Modal'){
 					console.log("this is card 4 modal info");
-					latlngReturn=returnEventLatLong();
+					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[3];
 					lngVar = latlngReturn.longitude[3];
 					weatherNow(latVar,lngVar);
@@ -68,7 +69,7 @@ $(document).ready(function() {
 				}
 				else if($(this).data("value")==='c5Modal'){
 					console.log("this is card 5 modal info");
-					latlngReturn=returnEventLatLong();
+					//latlngReturn=returnEventLatLong();
 					latVar = latlngReturn.latitude[4];
 					lngVar = latlngReturn.longitude[4];
 					weatherNow(latVar,lngVar);
